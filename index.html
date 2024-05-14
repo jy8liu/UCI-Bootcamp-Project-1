@@ -44,12 +44,34 @@
             </div>
             
             <!-- The Modal -->
-            <div id="myModal" class="modal">
+            <!--button section for the whole website-->
+            <div id="settingsModal" class="modal">
                 <!-- Modal content -->
                 <div class="modal-content">
-                    <span class="close">&times;</span>
+                    <span class="closeButton">&times;</span>
+                    <h2>Settings</h2>
+                    <!-- Settings Form -->
+                    <form id="settingsForm">
+                        <label for="modeSelect">Mode:</label>
+                        <select id="modeSelect">
+                            <option value="creative">Standard</option>
+                            <option value="informative">Creative</option>
+                            <option value="persuasive">Complex</option>
+                            <option value="narrative">Simple</option>
+                        </select>
+                        <br>
+                        <label for="wordCountInput">Word count:</label>
+                        <input type="number" id="wordCountInput" name="wordCount" min="50" value="300">
+                        <br>
+                        <button type="button" id="saveSettingsButton">Save Settings</button>
+                    </form>
                 </div>
             </div>
+
+            <p id="generatedStory"></p>
+            <button id="retrieveStoriesButton">Retrieve Past Stories</button>
+            <div id="pastStoriesContainer"></div>
+
             <!-- Footer -->
             <footer>
                 <p>Authors: 🅲🆁🅴:a:🆃🅴🅳 :b:🆈 🅹:a:🆂:o2:🅽 🅻🅸🆄

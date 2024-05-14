@@ -1,4 +1,42 @@
 body {
+    margin: 0 auto;
+    padding: 0 auto;
+    box-sizing: border-box;
+  }
+  .logo {
+    text-align: center;
+    color: whitesmoke; 
+    border: solid red;
+    
+  }
+  .hero {
+    background-image: url(https://mrwallpaper.com/images/hd/purple-galaxy-live-ih08fr5hinz2ayk8.jpg); 
+    margin: 0 auto;
+    padding: 10px;
+    height: 800px;
+    background-size: cover;
+    background-color: #888;
+  }
+  #description {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 35px;
+  }
+  .form-container {
+    text-align: center;
+  }
+  form {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  #about-site {
+    color: whitesmoke;
+    align-items: bottom;
+    margin: 10% auto;
+    text-align: center;
+  }
+ /* The Modal (background) */
   margin: 0 auto;
   padding: 0 auto;
   box-sizing: border-box;
@@ -47,6 +85,22 @@ form {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.closeButton {
+  color: #aaa;
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
@@ -65,12 +119,15 @@ form {
   font-size: 28px;
   font-weight: bold;
 }
-.close:hover,
-.close:focus {
-  color: #000;
+
+.closeButton:hover,
+.closeButton:focus {
+  color: black;
   text-decoration: none;
   cursor: pointer;
 }
+
+
 #settings-btn {
   padding: 20px 40px;
   top: 0;
@@ -102,6 +159,12 @@ footer {
   width: 100%;
 }
 .quill {
-  min-height: 260px;
+  margin-left: 15px;
+   min-height: 260px;
   min-width: 260px;
+}
+
+#generatedStory{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: darkgreen;
 }

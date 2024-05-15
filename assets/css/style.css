@@ -3,6 +3,7 @@ body {
     padding: 0 auto;
     box-sizing: border-box;
   }
+
   .logo {
     text-align: center;
     color: whitesmoke; 
@@ -14,7 +15,7 @@ body {
     background-image: url(https://mrwallpaper.com/images/hd/purple-galaxy-live-ih08fr5hinz2ayk8.jpg);
     margin: 0 auto;
     padding: 10px;
-    min-height: 800px;
+    min-height: 1440px;
     background-size: auto ;
     background-repeat: repeat;
     background-color: #888;
@@ -75,9 +76,9 @@ body {
 /* Modal Content */
 .modal-content {
   font-family: 'Poppins', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  color: darkgreen;
+  color: rgb(50, 9, 81);
   background-color: rgba(255, 255, 255, 0.5); /* White background with 50% opacity */
-  border: 2px solid darkgreen; /* Border color matching the text */
+  border: 2px solid rgb(179, 80, 254); /* Border color matching the text */
   padding: 20px; /* Padding inside the box */
   width: 50%; /* Width of the box */
   margin: 15% auto; /* 15% from the top and centered horizontally */
@@ -103,6 +104,17 @@ body {
 
 #settings-btn {
   padding: 10px 20px;
+  background-color: rgb(179, 80, 254);
+}
+
+#saveSettingsButton{
+  padding: 10px 20px;
+  background-color: rgb(179, 80, 254);
+}
+
+#retrieveStoriesButton{
+  padding: 10px 20px;
+  background-color: rgb(179, 80, 254);
 }
 
 header {
@@ -113,6 +125,7 @@ header {
  #submit-btn {
   padding: 1px 30px;
   align-items: flex-start;
+  background-color: rgb(179, 80, 254);
 }
 
 footer {
@@ -160,4 +173,12 @@ footer {
   display: none; /* Hide initially */
   border-radius: 20px; /* Rounded corners */
   
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column; /* Display elements in a column */
+    align-items: flex-start; /* Align elements to the start (left) */
+  }
 }

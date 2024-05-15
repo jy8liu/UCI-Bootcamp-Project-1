@@ -51,13 +51,17 @@ background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 /* Modal Content */
 .modal-content {
-background-color: rgb(179, 80, 254);
+background-color: rgb(179, 80, 254, .5);
 margin: 15% auto; /* 15% from the top and centered */
 padding: 20px;
 border: 1px solid #888;
-width: 80%; /* Could be more or less, depending on screen size */
+width: 50%; /* Could be more or less, depending on screen size */
 font-size: 20px;
-font-family: Verdana, Geneva, Tahoma, sans-serif
+font-family: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
+text-align: center;
+border-radius: 20px;
+font-family: 'Poppins', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 /* The Close Button */
 .closeButton {

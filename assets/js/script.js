@@ -45,9 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
-
-
 // generateStory function
 async function generateStory(mode, wordCount, input) {
   const url = 'https://ai-story-generator.p.rapidapi.com/generate/story/v1/';
@@ -64,6 +61,12 @@ async function generateStory(mode, wordCount, input) {
           word_count: wordCount
       })
   };
+  
+  // Select the submit button
+  const submitButton = document.getElementById('submit-btn');
+
+  // Add the is-loading class to show the loading state
+  submitButton.classList.add('is-loading');
 
   try {
       const response = await fetch(url, options);
@@ -83,6 +86,9 @@ async function generateStory(mode, wordCount, input) {
       saveStoryDetails(formattedStoryText);
   } catch (error) {
       console.error("Failed to generate story:", error);
+  } finally {
+      // Remove the is-loading class once the request completes or fails
+      submitButton.classList.remove('is-loading');
   }
 }
 

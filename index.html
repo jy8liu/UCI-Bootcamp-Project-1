@@ -3,7 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"
+    >
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
     <title>Group Project One</title>
 
@@ -19,7 +23,7 @@
                 <img class="quill" src="./assets/images/book_logo.png" alt="" width="140px">
                 <h1 class="logo"><strong>⚔️ＳＴＯＲＹ ＦＯＲＧＥ⚔️</strong></h1>
 
-                <button id="settings-btn" type="settings">Settings</button>
+                <button class= "button is-primary" id="settings-btn" type="settings">Settings</button>
             </header>
             <div id="description">
                 <p>𝕄𝕒𝕜𝕖 𝕪𝕠𝕦𝕣 𝕤𝕥𝕠𝕣𝕚𝕖𝕤 𝕔𝕠𝕞𝕖 𝕥𝕠 𝕝𝕚𝕗𝕖...</p>
@@ -39,7 +43,7 @@
                 <form id="myForm">
                     <textarea name="story-keywords" id="story-keywords" cols="30" rows="5"></textarea>
 
-                    <button id="submit-btn" type="submit">Submit</button>
+                    <button class= "button is-primary" id="submit-btn" type="submit">Submit</button>
                 </form>
             </div>
             
@@ -69,7 +73,7 @@
             </div>
 
             <p id="generatedStory"></p>
-            <button id="retrieveStoriesButton">Retrieve Past Stories</button>
+            <button class= "button is-primary" id="retrieveStoriesButton">Retrieve Past Stories</button>
             <div id="pastStoriesContainer"></div>
 
             <!-- Footer -->

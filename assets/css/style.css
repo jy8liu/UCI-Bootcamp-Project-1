@@ -6,7 +6,6 @@ body {
   .logo {
     text-align: center;
     color: whitesmoke; 
-    border: solid red;
     
   }
   .hero {
@@ -14,8 +13,8 @@ body {
     margin: 0 auto;
     padding: 10px;
     min-height: 800px;
-    background-size: auto;
-    background-repeat: repeat-y;
+    background-size: auto ;
+    background-repeat: repeat;
     background-color: #888;
 }
   #description {

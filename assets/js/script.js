@@ -45,9 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
-
-
 // generateStory function
 async function generateStory(mode, wordCount, input) {
   const url = 'https://ai-story-generator.p.rapidapi.com/generate/story/v1/';
@@ -64,6 +61,12 @@ async function generateStory(mode, wordCount, input) {
           word_count: wordCount
       })
   };
+  
+  // Select the submit button
+  const submitButton = document.getElementById('submit-btn');
+
+  // Add the is-loading class to show the loading state
+  submitButton.classList.add('is-loading');
 
   try {
       const response = await fetch(url, options);
@@ -72,14 +75,20 @@ async function generateStory(mode, wordCount, input) {
       // Display the story
       const jsonResult = JSON.parse(result); // Parse the string result into JSON
       const storyText = jsonResult.story; // Access the "story" key
-      const firstSentence = storyText.split(".")[0]; // first sentence
+      // Replace newline characters with HTML line breaks for proper formatting
+      const formattedStoryText = storyText.replace(/\n/g, '<br>');
 
-      document.getElementById('generatedStory').textContent = storyText; //sends text to generatedStory ID
-      
+      // Display the story with line breaks
+      document.getElementById('generatedStory').style.display = 'block';
+      document.getElementById('generatedStory').innerHTML = formattedStoryText;
+
       // Save the story details
-      saveStoryDetails(storyText);
+      saveStoryDetails(formattedStoryText);
   } catch (error) {
       console.error("Failed to generate story:", error);
+  } finally {
+      // Remove the is-loading class once the request completes or fails
+      submitButton.classList.remove('is-loading');
   }
 }
 
@@ -111,6 +120,7 @@ document.getElementById('retrieveStoriesButton').addEventListener('click', funct
   if (pastStories.length === 0) {
       storiesContainer.innerHTML = '<p>No past stories found.</p>';
   } else {
+    storiesContainer.style.display = 'block';
       pastStories.forEach(story => {
           const storyDiv = document.createElement('div');
           storyDiv.innerHTML = `

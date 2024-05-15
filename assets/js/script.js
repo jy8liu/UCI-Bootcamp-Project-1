@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeButton = document.querySelector('.closeButton');
   const saveButton = document.getElementById('saveSettingsButton');
   const form = document.getElementById('myForm');
+  
 
   // Open the modal when the settings button is clicked
   openButton.addEventListener('click', () => {
@@ -52,7 +53,7 @@ async function generateStory(mode, wordCount, input) {
       method: 'POST',
       headers: {
           'content-type': 'application/x-www-form-urlencoded',
-          'X-RapidAPI-Key': '14b44ec643msh7854b1aef4cc057p10e556jsn656709d3adf2', // actual API Key
+          'X-RapidAPI-Key': '70281a6694msh32dca21e4be3472p1aad0bjsn033a6a72c7f5', // actual API Key
           'X-RapidAPI-Host': 'ai-story-generator.p.rapidapi.com'
       },
       body: new URLSearchParams({

@@ -25,7 +25,8 @@ body {
     text-align: center;
     color: whitesmoke;
     font-size: 34px;
-    font-family: 'Nanum Gothic';
+    font-family: 'Cinzel';
+    font-weight: 700;
   }
   .form-container {
     display: flex;

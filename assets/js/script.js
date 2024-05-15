@@ -128,6 +128,7 @@ document.getElementById('retrieveStoriesButton').addEventListener('click', funct
               <p>Story:</p>
               <p>${story.story}</p>
               <p><i>Generated on: ${story.timestamp}</i></p>
+              <br>
           `;
           storiesContainer.appendChild(storyDiv);
       });

@@ -6,6 +6,8 @@ body {
   .logo {
     text-align: center;
     color: whitesmoke; 
+    font-family: 'Bebas Neue';
+    font-size: 37px;
     
   }
   .hero {
@@ -20,23 +22,44 @@ body {
   #description {
     text-align: center;
     color: whitesmoke;
-    font-size: 35px;
+    font-size: 34px;
+    font-family: 'Nanum Gothic';
   }
   .form-container {
-    text-align: center;
+    display: flex;
+    justify-content: center; /* Center the form container */
+    width: 100%; /* Full width of the screen */
   }
-  form {
+  /*form {
     display: flex;
     align-items: flex-end;
     justify-content: center;
   }
+*/
+  #myForm {
+    width: 66.66%; /* 2/3 of the screen width */
+    padding: 20px; /* Padding inside the form */
+    font-family: 'Poppins', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Matching font style */
+    color: darkgreen; /* Matching text color */
+  }
+
+  textarea {
+  width: 100%; /* Full width of the form container */
+  margin-bottom: 20px; /* Space between the textarea and the button */
+}
+
+
+
   #about-site {
     color: whitesmoke;
     align-items: bottom;
     margin: 10% auto;
     text-align: center;
+    font-family: 'Nanum Gothic';
+    font-size: 25px;
   }
- /* The Modal (background) */
+
+/* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -46,20 +69,24 @@ body {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content */
 .modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  font-family: 'Poppins', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: darkgreen;
+  background-color: rgba(255, 255, 255, 0.5); /* White background with 50% opacity */
+  border: 2px solid darkgreen; /* Border color matching the text */
+  padding: 20px; /* Padding inside the box */
+  width: 50%; /* Width of the box */
+  margin: 15% auto; /* 15% from the top and centered horizontally */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
+  text-align: center; /* Center text inside the box */
+  border-radius: 20px; /* Rounded corners */
 }
 
-/* The Close Button */
+/* Close Button */
 .closeButton {
   color: #aaa;
   float: right;
@@ -74,19 +101,20 @@ body {
   cursor: pointer;
 }
 
-
 #settings-btn {
   padding: 10px 20px;
 }
+
 header {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
  #submit-btn {
-  padding: 5px 30px;
+  padding: 1px 30px;
   align-items: flex-start;
 }
+
 footer {
   text-align: center;
   padding: 3px;
@@ -101,22 +129,28 @@ footer {
 
 #generatedStory {
   margin: 0 auto; /* Center the box horizontally */
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  color: darkgreen;
-  background-color: rgba(255, 255, 255, 0.5); /* White background with 80% opacity */
-  border: 2px solid darkgreen; /* Border color matching the text */
+  font-family: 'Poppins', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: large;
+  font-weight: 500;
+  color: rgb(5, 71, 5);
+  background-color: rgba(255, 255, 255, 0.5); /* White background with 50% opacity */
+  border: 2px solid rgb(5, 84, 5); /* Border color matching the text */
   padding: 20px; /* Padding inside the box */
   width: 60%; /* Width of the box */
   margin-top: 20px; /* Space between the submit button and the box */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
   text-align: center; /* Center text inside the box */
   display: none;
+  border-radius: 20px; /* Rounded corners */
+  
 }
 
 #pastStoriesContainer {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  color: darkgreen;
-  background-color: rgba(255, 255, 255, 0.5); /* White background with 80% opacity */
+  font-family: 'Poppins', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: large;
+  font-weight: 500;
+  color: rgb(5, 71, 5);
+  background-color: rgba(255, 255, 255, 0.5); /* White background with 50% opacity */
   border: 2px solid darkgreen; /* Border color matching the text */
   padding: 20px; /* Padding inside the box */
   width: 60%; /* Width of the box */
@@ -124,4 +158,6 @@ footer {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
   text-align: center; /* Center text inside the box */
   display: none; /* Hide initially */
+  border-radius: 20px; /* Rounded corners */
+  
 }

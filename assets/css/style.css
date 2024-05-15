@@ -2,6 +2,7 @@ body {
     margin: 0 auto;
     padding: 0 auto;
     box-sizing: border-box;
+    overflow: hidden;
   }
 
   .logo {
@@ -71,7 +72,7 @@ body {
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  overflow: hidden; /* Enable scroll if needed */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
@@ -177,10 +178,15 @@ footer {
   
 }
 
-/* Media query for smaller screens */
 @media screen and (max-width: 768px) {
   header {
-    flex-direction: column; /* Display elements in a column */
-    align-items: flex-start; /* Align elements to the start (left) */
+    flex-direction: column; /* vertical stack of header elements */
   }
-}
+  .container{
+   flex: 0 0 100%; /* Allows each side section to take full width*/
+    height: auto; /* Auto adjusts height to content */
+  }
+  main {
+    flex-direction: column; /* vertical stack of main elements */
+  }
+  }

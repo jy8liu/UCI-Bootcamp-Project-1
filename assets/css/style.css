@@ -6,17 +6,17 @@ body {
   .logo {
     text-align: center;
     color: whitesmoke; 
-    border: solid red;
     
   }
   .hero {
-    background-image: url(https://mrwallpaper.com/images/hd/purple-galaxy-live-ih08fr5hinz2ayk8.jpg); 
+    background-image: url(https://mrwallpaper.com/images/hd/purple-galaxy-live-ih08fr5hinz2ayk8.jpg);
     margin: 0 auto;
     padding: 10px;
-    height: 800px;
-    background-size: cover;
+    min-height: 800px;
+    background-size: auto ;
+    background-repeat: repeat;
     background-color: #888;
-  }
+}
   #description {
     text-align: center;
     color: whitesmoke;
@@ -37,49 +37,10 @@ body {
     text-align: center;
   }
  /* The Modal (background) */
-  margin: 0 auto;
-  padding: 0 auto;
-  box-sizing: border-box;
-}
-.logo {
-  display: flex;
-  justify-content: space-evenly;
-  text-align: center;
-  font-size: 50px;
-  color: whitesmoke;
-}
-.hero {
-  background-image: url(https://mrwallpaper.com/images/hd/purple-galaxy-live-ih08fr5hinz2ayk8.jpg);
-  margin: 0 auto;
-  padding: 10px;
-  height: 1295px;
-  background-size: cover;
-}
-#description {
-  text-align: center;
-  color: whitesmoke;
-  font-size: 35px;
-}
-.form-container {
-  text-align: center;
-}
-form {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-#about-site {
-  color: whitesmoke;
-  align-items: bottom;
-  margin: 10% auto;
-  text-align: center;
-}
-/* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -101,20 +62,6 @@ form {
 /* The Close Button */
 .closeButton {
   color: #aaa;
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-}
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-/* The Close Button */
-.close {
-  color: #aaaaaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -129,24 +76,14 @@ form {
 
 
 #settings-btn {
-  padding: 20px 40px;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgb(122, 122, 211);
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  font-size: 20px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding: 10px 20px;
 }
 header {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-#submit-btn {
+ #submit-btn {
   padding: 5px 30px;
   align-items: flex-start;
 }
@@ -160,11 +97,31 @@ footer {
 }
 .quill {
   margin-left: 15px;
-   min-height: 260px;
-  min-width: 260px;
 }
 
-#generatedStory{
+#generatedStory {
+  margin: 0 auto; /* Center the box horizontally */
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: darkgreen;
+  background-color: rgba(255, 255, 255, 0.5); /* White background with 80% opacity */
+  border: 2px solid darkgreen; /* Border color matching the text */
+  padding: 20px; /* Padding inside the box */
+  width: 60%; /* Width of the box */
+  margin-top: 20px; /* Space between the submit button and the box */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
+  text-align: center; /* Center text inside the box */
+  display: none;
+}
+
+#pastStoriesContainer {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: darkgreen;
+  background-color: rgba(255, 255, 255, 0.5); /* White background with 80% opacity */
+  border: 2px solid darkgreen; /* Border color matching the text */
+  padding: 20px; /* Padding inside the box */
+  width: 60%; /* Width of the box */
+  margin: 20px auto; /* Center the box horizontally */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
+  text-align: center; /* Center text inside the box */
+  display: none; /* Hide initially */
 }

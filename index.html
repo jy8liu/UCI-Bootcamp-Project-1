@@ -12,10 +12,11 @@
     <!--GOoGLE FONTS API LINK-->>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nanum+Gothic&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nanum+Gothic&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" 
+     rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
-    <title>Group Project One</title>
+    <title>Story Forge App - Group Project 1</title>
 
 </head>
 
@@ -50,7 +51,8 @@
                         <label for="wordCountInput">Word count:</label>
                         <input type="number" id="wordCountInput" name="wordCount" min="50" value="300">
                         <br>
-                        <button class= "button is-primary" type="button" id="saveSettingsButton">Save Settings</button>
+                        <button class= "button is-primary" type="button" id="saveSettingsButton">Save Settings
+                        </button>
                     </form>
                 </div>
             </div>
@@ -72,8 +74,14 @@
             <!--button section for the whole website-->
             <div class="form-container">
                 <form id="myForm">
-                    <textarea name="story-keywords" id="story-keywords" cols="30" rows="5"></textarea>
-                    <button class= "button is-primary" id="submit-btn" type="submit">Submit</button>
+                    <textarea 
+                        name="story-keywords" 
+                        id="story-keywords" 
+                        cols="30" 
+                        rows="5" 
+                        placeholder="Feel free to enter a small description of a story you would like to read."
+                    ></textarea>
+                    <button class="button is-primary" id="submit-btn" type="submit">Submit</button>
                 </form>
             </div>
             

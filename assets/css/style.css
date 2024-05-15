@@ -9,7 +9,7 @@ body {
     text-align: center;
     color: whitesmoke; 
     font-family: 'Bebas Neue';
-    font-size: 37px;
+    font-size: 60px;
     
   }
   .hero {
@@ -41,7 +41,7 @@ body {
   }
 */
   #myForm {
-    width: 66.66%; /* 2/3 of the screen width */
+    width: 75%; /* 2/3 of the screen width */
     padding: 20px; /* Padding inside the form */
     font-family: 'Poppins', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Matching font style */
     color: darkgreen; /* Matching text color */
@@ -152,7 +152,7 @@ footer {
   background-color: rgba(255, 255, 255, 0.5); /* White background with 50% opacity */
   border: 2px solid rgb(5, 84, 5); /* Border color matching the text */
   padding: 20px; /* Padding inside the box */
-  width: 60%; /* Width of the box */
+  width: 98%; /* Width of the box */
   margin-top: 20px; /* Space between the submit button and the box */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
   text-align: center; /* Center text inside the box */
@@ -169,7 +169,7 @@ footer {
   background-color: rgba(255, 255, 255, 0.5); /* White background with 50% opacity */
   border: 2px solid darkgreen; /* Border color matching the text */
   padding: 20px; /* Padding inside the box */
-  width: 60%; /* Width of the box */
+  width: 98%; /* Width of the box */
   margin: 20px auto; /* Center the box horizontally */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
   text-align: center; /* Center text inside the box */

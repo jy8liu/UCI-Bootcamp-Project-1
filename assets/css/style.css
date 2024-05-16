@@ -1,234 +1,193 @@
 body {
-  margin: 0 auto;
-  padding: 0 auto;
-  box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .logo {
+    text-align: center;
+    color: whitesmoke; 
+    font-family: 'Bebas Neue';
+    font-size: 60px;
+    
+  }
+  .hero {
+    background-image: url(./new-website-image.jpg);
+    margin: 0 auto;
+    padding: 10px;
+    min-height: 1440px;
+    background-size: auto ;
+    background-repeat: repeat;
+    background-color: #888;
 }
-.logo {
-  text-align: center;
-  color: whitesmoke;
+  #description {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 34px;
+    font-family: 'Cinzel';
+    font-weight: 700;
+  }
+  .form-container {
+    display: flex;
+    justify-content: center; /* Center the form container */
+    width: 100%; /* Full width of the screen */
+  }
+  /* should delete this 
+  
+  form {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+*/
+  #myForm {
+    width: 75%; /* 2/3 of the screen width */
+    padding: 20px; /* Padding inside the form */
+    font-family: 'Poppins', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Matching font style */
+    color: darkgreen; /* Matching text color */
+  }
+
+  textarea {
+  width: 100%; /* Full width of the form container */
+  margin-bottom: 20px; /* Space between the textarea and the button */
 }
-.hero {
-  background-image: url(./new-website-image.jpg);
-  margin: 0 auto;
-  padding: 10px;
-  min-height: 1320px;
-  background-size: auto ;
-  background-repeat: repeat;
-  background-color: #888;
-}
-#description {
-  text-align: center;
-  color: whitesmoke;
-  font-size: 35px;
-  margin-top: 10px;
-}
-.form-container {
-  text-align: center;
-}
-form {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-#about-site {
-  color: whitesmoke;
-  align-items: bottom;
-  margin: 10% auto;
-  text-align: center;
-}
+
+
+
+  #about-site {
+    color: whitesmoke;
+    align-items: bottom;
+    margin: 10% auto;
+    text-align: center;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 25px;
+  }
+
 /* The Modal (background) */
 .modal {
-display: none; /* Hidden by default */
-position: fixed; /* Stay in place */
-z-index: 1; /* Sit on top */
-left: 0;
-top: 0;
-width: 100%; /* Full width */
-height: 100%; /* Full height */
-overflow: auto; /* Enable scroll if needed */
-background-color: rgb(0,0,0); /* Fallback color */
-background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
+
 /* Modal Content */
 .modal-content {
-background-color: rgb(179, 80, 254);
-margin: 15% auto; /* 15% from the top and centered */
-padding: 20px;
-border: 1px solid #888;
-width: 80%; /* Could be more or less, depending on screen size */
-font-size: 20px;
-font-family: Verdana, Geneva, Tahoma, sans-serif
+  font-family: 'Poppins', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: rgb(50, 9, 81);
+  background-color: rgba(255, 255, 255, 0.5); /* White background with 50% opacity */
+  border: 2px solid rgb(179, 80, 254); /* Border color matching the text */
+  padding: 20px; /* Padding inside the box */
+  width: 50%; /* Width of the box */
+  margin: 15% auto; /* 15% from the top and centered horizontally */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
+  text-align: center; /* Center text inside the box */
+  border-radius: 20px; /* Rounded corners */
 }
-/* The Close Button */
+
+/* Close Button */
 .closeButton {
-color: #aaa;
-float: right;
-font-size: 28px;
-font-weight: bold;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
+
 .closeButton:hover,
 .closeButton:focus {
-color: black;
-text-decoration: none;
-cursor: pointer;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
+
 #settings-btn {
-padding: 10px 20px;
-margin-top: 15px;
+  padding: 10px 20px;
+  background-color: rgb(179, 80, 254);
 }
-header {
-display: flex;
-justify-content: space-evenly;
-align-items: center;
+
+#saveSettingsButton{
+  padding: 10px 20px;
+  background-color: rgb(179, 80, 254);
 }
-#submit-btn {
-padding: 5px 30px;
-align-items: flex-start;
-}
-footer {
-text-align: center;
-padding: 3px;
-color: whitesmoke;
-left: 0;
-bottom: 20%;
-width: 100%;
-}
-#generatedStory {
-font-family: 'Poppins';font-size: 22px;
-margin: 0 auto; /* Center the box horizontally */
-color: darkgreen;
-background-color: rgba(255, 255, 255, 0.5); /* White background with 80% opacity */
-border: 2px solid darkgreen; /* Border color matching the text */
-padding: 20px; /* Padding inside the box */
-width: 98%; /* Width of the box */
-margin-top: 20px; /* Space between the submit button and the box */
-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
-text-align: center; /* Center text inside the box */
-font-weight: bold;
-display: none;
-font-size: 20px;
-}
-#pastStoriesContainer {
-font-family: 'Poppins';font-size: 22px;
-color: rgb(0, 80, 0);
-background-color: rgba(255, 255, 255, 0.5); /* White background with 80% opacity */
-border: 2px solid darkgreen; /* Border color matching the text */
-padding: 20px; /* Padding inside the box */
-width: 98%; /* Width of the box */
-margin: 20px auto; /* Center the box horizontally */
-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
-text-align: center; /* Center text inside the box */
-display: none; /* Hide initially */
-font-weight: bold;
-font-size: 20px;
-}
-b{
-font-size: 38px;
-}
-main {
-  flex-direction: column; /* vertical stack of main elements */
-}
-#about-site{
-font-size: 32px;
-font-weight: bold;
-}
-p{
-font-family: 'Poppins';font-size: 22px;
-margin-top: 60px;
-font-size: 20px;
-font-weight: bold;
-color: darkgreen;
-}
-strong {
-color: white;
-font-size: 28px;
-}
-label{
-font-size: 30px;
-color: white;
-}
-h2 {
-font-size: 30px;
-font-weight: bold;
-color: white;
-}
-#modeSelect {
-background-color: rgb(64, 64, 98);
-color: whitesmoke;
-font-size: 18px;
-border-radius: 3%;
-transition-duration: 0.6s;
-width: 10%;
-margin-top: 12px;
-margin-left: 2px;
-margin-bottom: 8px;
-padding-top: 2px;
-padding-bottom: 2px;
-font-weight: bold;
-}
-#wordCountInput {
-background-color: rgb(64, 64, 98);
-color: whitesmoke;
-font-size: 18px;
-border-radius: 3%;
-transition-duration: 0.6s;
-width: 4%;
-margin-top: 12px;
-margin-left: 2px;
-margin-bottom: 5px;
-padding-top: 2px;
-padding-bottom: 2px;
-font-weight: bold;
-}
-#saveSettingsButton {
-margin-left: 8px;
-color: white;
-background-color: rgb(64, 64, 98);
-font-size: 18px;
-border-radius: 3%;
-transition-duration: 0.6s;
-width: 9%;
-padding-top: 5px;
-padding-bottom: 6px;
-margin-top: 12px;
-margin-bottom: 5px;
-}
-#story-keywords{
-  margin: 15px 0;
-  width: 20%;
-  display: block;
-  margin-right: 10px;
-  margin-top: 20px;
-}
-#settings-btn {
-background-color: rgb(179, 80, 254);
-padding: 12px 25px 15px;
-}
-.new-color {
-color: white;
-font-size: 36px;
-}
-.new-color2 {
-font-size: 20px;
-color: white
-}
+
 #retrieveStoriesButton{
-background-color: rgb(179, 80, 254);
-padding: 12px 25px 15px;
+  padding: 10px 20px;
+  background-color: rgb(179, 80, 254);
 }
-#submit-btn{
-background-color: rgb(179, 80, 254);
-padding: 12px 25px 15px;
-}
-@media screen and (max-width: 768px) {
+
 header {
-  flex-direction: column; /* vertical stack of header elements */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
-.container{
- flex: 0 0 100%; /* Allows each side section to take full width*/
-  height: auto; /* Auto adjusts height to content */
+ #submit-btn {
+  padding: 1px 30px;
+  align-items: flex-start;
+  background-color: rgb(179, 80, 254);
 }
-main {
-  flex-direction: column; /* vertical stack of main elements */
+
+footer {
+  text-align: center;
+  padding: 3px;
+  color: whitesmoke;
+  left: 0;
+  bottom: 20%;
+  width: 100%;
 }
+.quill {
+  margin-left: 20px;
 }
+
+#generatedStory {
+  margin: 0 auto; /* Center the box horizontally */
+  font-family: 'Poppins', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: large;
+  font-weight: 500;
+  color: rgb(50, 9, 81);
+  background-color: rgba(255, 255, 255, 0.5); /* White background with 50% opacity */
+  border: 2px solid rgb(50, 9, 81); /* Border color matching the text */
+  padding: 20px; /* Padding inside the box */
+  width: 98%; /* Width of the box */
+  margin-top: 20px; /* Space between the submit button and the box */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.65); /* Add a shadow for depth */
+  text-align: center; /* Center text inside the box */
+  display: none;
+  border-radius: 20px; /* Rounded corners */
+  
+}
+
+#pastStoriesContainer {
+  font-family: 'Poppins', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: large;
+  font-weight: 500;
+  color: rgb(50, 9, 81);
+  background-color: rgba(255, 255, 255, 0.65); /* White background with 50% opacity */
+  border: 2px solid rgb(50, 9, 81); /* Border color matching the text */
+  padding: 20px; /* Padding inside the box */
+  width: 98%; /* Width of the box */
+  margin: 20px auto; /* Center the box horizontally */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
+  text-align: center; /* Center text inside the box */
+  display: none; /* Hide initially */
+  border-radius: 20px; /* Rounded corners */
+  
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column; /* vertical stack of header elements */
+  }
+  .container{
+   flex: 0 0 100%; /* Allows each side section to take full width*/
+    height: auto; /* Auto adjusts height to content */
+  }
+  main {
+    flex-direction: column; /* vertical stack of main elements */
+  }
+  }

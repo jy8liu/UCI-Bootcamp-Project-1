@@ -5,6 +5,7 @@
 ### Welcome to Story Forge, your go-to destination for endless storytelling possibilities!. With Story Forge, not only can you craft original tales based on your imagination, but you can also bring them to life.
 
 # About
+
 ### Story Forge combines the power of storytelling and visual artistry to deliver a truly immersive creative experience. Utilizing advanced AI algorithms, Story Forge generates unique stories tailored to your input.
 
 # 2. User Story
@@ -16,6 +17,8 @@
 - THAT opens a modal window with story adjustment settings
 - I WANT the stories to be saved in local storage,
 - SO THAT I can save prior stories.
+- I WANT clear and readable fonts that are generated from Google Fonts API
+- THAT enhance the site's story-telling theme.
 
 # 3. How to use
 
@@ -24,6 +27,7 @@
 # 4. Deployment
 
 ## Repo URL: https://github.com/jy8liu/UCI-Bootcamp-Project-1
+
 ## Deployed Site URL: https://jy8liu.github.io/UCI-Bootcamp-Project-1/
 
 # 5. Visuals

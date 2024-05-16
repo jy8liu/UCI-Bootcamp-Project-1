@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,27 +8,21 @@
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"
     >
-    <!--GOoGLE FONTS API LINK-->
+    <!--GOOGLE FONTS API LINK-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400..900&family=Nanum+Gothic&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
     <title>Story Forge App - Group Project 1</title>
-
 </head>
-
-
 <body>
     <div class="hero">
         <div class="container">
-
             <!--The title of the website goes here-->
             <header id="banner">
                 <img class="quill" src="./assets/images/book_logo.png" alt="" width="140px">
                 <h1 class="logo"><strong>STORY FORGE</strong></h1>
                 <button class= "button is-primary" id="settings-btn" type="settings">Settings</button>
-
             <!-- The Modal -->
             <div id="settingsModal" class="modal">
                 <div class="modal-background"></div>
@@ -57,10 +49,8 @@
                 </div>
             </div>
             </header>
-
             <div id="description">
                 <p>Make your stories come to life...</p>
-
                 <!--Here is a quick description of the website-->
             </div>
             <div id="about-site">
@@ -69,34 +59,27 @@
                 <br>
                 <h3>Explore endless possibilities and unleash your imagination with Story Forge today</h3>
             </div>
-
             <!--button section for the whole website-->
             <div class="form-container">
                 <form id="myForm">
-                    <textarea 
-                        name="story-keywords" 
-                        id="story-keywords" 
-                        cols="30" 
-                        rows="5" 
+                    <textarea
+                        name="story-keywords"
+                        id="story-keywords"
+                        cols="30"
+                        rows="5"
                         placeholder="Feel free to enter a small description of a story you would like to read."
                     ></textarea>
                     <button class="button is-primary" id="submit-btn" type="submit">Submit</button>
                 </form>
-            </div>          
-
+            </div>
             <p id="generatedStory"></p>
             <button class="button is-primary" id="retrieveStoriesButton">Retrieve Past Stories</button>
             <div id="pastStoriesContainer"></div>
-
             <!-- Footer -->
             <footer>
                 <p>Authors: Created by Jason Liu Adam Rosenberg Noel Cabrera Jesus Ruiz Gutierrez &copy; 2024</p>
             </footer>
-
             <!-- JS-->>
             <script src="./assets/js/script.js"></script>
 </body>
-
 </html>
-
-    

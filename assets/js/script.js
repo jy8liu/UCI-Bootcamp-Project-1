@@ -53,7 +53,7 @@ async function generateStory(mode, wordCount, input) {
       method: 'POST',
       headers: {
           'content-type': 'application/x-www-form-urlencoded',
-          'X-RapidAPI-Key': '70281a6694msh32dca21e4be3472p1aad0bjsn033a6a72c7f5', // actual API Key
+          'X-RapidAPI-Key': 'aef246be0bmsh326fcec741edfebp177d91jsn3f622b14d39e', // actual API Key
           'X-RapidAPI-Host': 'ai-story-generator.p.rapidapi.com'
       },
       body: new URLSearchParams({

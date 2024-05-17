@@ -156,7 +156,7 @@ footer {
   width: 98%; /* Width of the box */
   margin-top: 20px; /* Space between the submit button and the box */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.65); /* Add a shadow for depth */
-  text-align: center; /* Center text inside the box */
+  text-align: start; /* start text inside the box */
   display: none;
   border-radius: 20px; /* Rounded corners */
   
@@ -173,7 +173,7 @@ footer {
   width: 98%; /* Width of the box */
   margin: 20px auto; /* Center the box horizontally */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
-  text-align: center; /* Center text inside the box */
+  text-align: start; /* start text inside the box */
   display: none; /* Hide initially */
   border-radius: 20px; /* Rounded corners */
   

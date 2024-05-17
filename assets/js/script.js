@@ -48,18 +48,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // generateStory function
 async function generateStory(mode, wordCount, input) {
-    const url = 'https://ai-story-generator.p.rapidapi.com/generate/story/v1/';
+    const url = 'https://chat-gpt26.p.rapidapi.com/'; // Ensure this is the correct endpoint
     const options = {
         method: 'POST',
         headers: {
-            'content-type': 'application/x-www-form-urlencoded',
-            'X-RapidAPI-Key': 'aef246be0bmsh326fcec741edfebp177d91jsn3f622b14d39e', // actual API Key
-            'X-RapidAPI-Host': 'ai-story-generator.p.rapidapi.com'
+            'Content-Type': 'application/json', // Corrected header
+            'X-RapidAPI-Key': 'cb676ecd46msh069024f9ad93846p1a21efjsndac1289895d8',
+            'X-RapidAPI-Host': 'chat-gpt26.p.rapidapi.com'
         },
-        body: new URLSearchParams({
-            mode: mode,
-            text: input, // Base text for the story
-            word_count: wordCount
+        body: JSON.stringify({ // Correctly formatted JSON body
+            model: 'gpt-3.5-turbo',
+            messages: [
+                {
+                    role: 'user',
+                    content: `give me a story of: ${input} & mode: ${mode} word_count= ${wordCount} and /\n/g for readability`
+                }
+            ]
         })
     };
     
@@ -71,30 +75,35 @@ async function generateStory(mode, wordCount, input) {
   
     try {
         const response = await fetch(url, options);
-        const result = await response.text(); // Retrieve the text response from the endpoint
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const result = await response.json(); // Retrieve and parse the JSON response from the endpoint
         
+        console.log(result); // Log the response for debugging
         // Display the story
-        const jsonResult = JSON.parse(result); // Parse the string result into JSON
-        const storyText = jsonResult.story; // Access the "story" key
+        const storyText = result.choices[0].message.content; // Access the "story" key
         // Replace newline characters with HTML line breaks for proper formatting
         const formattedStoryText = storyText.replace(/\n/g, '<br>');
   
         // Display the story with line breaks
-        document.getElementById('generatedStory').style.display = 'block';
-        document.getElementById('generatedStory').innerHTML = formattedStoryText;
+        const generatedStoryElement = document.getElementById('generatedStory');
+        generatedStoryElement.style.display = 'block';
+        generatedStoryElement.innerHTML = formattedStoryText;
   
         // Save the story details
         saveStoryDetails(formattedStoryText);
     } catch (error) {
         console.error("Failed to generate story:", error);
-        document.getElementById('generatedStory').style.display = 'block';
-        document.getElementById('generatedStory').innerHTML = 'Failed to generate story. Please try again later.';
+        const generatedStoryElement = document.getElementById('generatedStory');
+        generatedStoryElement.style.display = 'block';
+        generatedStoryElement.innerHTML = 'Failed to generate story. Please try again later.';
     } finally {
         // Remove the is-loading class once the request completes or fails
         submitButton.classList.remove('is-loading');
     }
-  }
-  
+}
+
 // Saves story details to localStorage
 function saveStoryDetails(story) {
   const pastStories = JSON.parse(localStorage.getItem('pastStories')) || [];

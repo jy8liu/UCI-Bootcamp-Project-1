@@ -48,51 +48,53 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // generateStory function
 async function generateStory(mode, wordCount, input) {
-  const url = 'https://ai-story-generator.p.rapidapi.com/generate/story/v1/';
-  const options = {
-      method: 'POST',
-      headers: {
-          'content-type': 'application/x-www-form-urlencoded',
-          'X-RapidAPI-Key': 'aef246be0bmsh326fcec741edfebp177d91jsn3f622b14d39e', // actual API Key
-          'X-RapidAPI-Host': 'ai-story-generator.p.rapidapi.com'
-      },
-      body: new URLSearchParams({
-          mode: mode,
-          text: input, // Base text for the story
-          word_count: wordCount
-      })
-  };
+    const url = 'https://ai-story-generator.p.rapidapi.com/generate/story/v1/';
+    const options = {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/x-www-form-urlencoded',
+            'X-RapidAPI-Key': 'aef246be0bmsh326fcec741edfebp177d91jsn3f622b14d39e', // actual API Key
+            'X-RapidAPI-Host': 'ai-story-generator.p.rapidapi.com'
+        },
+        body: new URLSearchParams({
+            mode: mode,
+            text: input, // Base text for the story
+            word_count: wordCount
+        })
+    };
+    
+    // Select the submit button
+    const submitButton = document.getElementById('submit-btn');
   
-  // Select the submit button
-  const submitButton = document.getElementById('submit-btn');
-
-  // Add the is-loading class to show the loading state
-  submitButton.classList.add('is-loading');
-
-  try {
-      const response = await fetch(url, options);
-      const result = await response.text(); // Retrieve the text response from the endpoint
-      
-      // Display the story
-      const jsonResult = JSON.parse(result); // Parse the string result into JSON
-      const storyText = jsonResult.story; // Access the "story" key
-      // Replace newline characters with HTML line breaks for proper formatting
-      const formattedStoryText = storyText.replace(/\n/g, '<br>');
-
-      // Display the story with line breaks
-      document.getElementById('generatedStory').style.display = 'block';
-      document.getElementById('generatedStory').innerHTML = formattedStoryText;
-
-      // Save the story details
-      saveStoryDetails(formattedStoryText);
-  } catch (error) {
-      console.error("Failed to generate story:", error);
-  } finally {
-      // Remove the is-loading class once the request completes or fails
-      submitButton.classList.remove('is-loading');
+    // Add the is-loading class to show the loading state
+    submitButton.classList.add('is-loading');
+  
+    try {
+        const response = await fetch(url, options);
+        const result = await response.text(); // Retrieve the text response from the endpoint
+        
+        // Display the story
+        const jsonResult = JSON.parse(result); // Parse the string result into JSON
+        const storyText = jsonResult.story; // Access the "story" key
+        // Replace newline characters with HTML line breaks for proper formatting
+        const formattedStoryText = storyText.replace(/\n/g, '<br>');
+  
+        // Display the story with line breaks
+        document.getElementById('generatedStory').style.display = 'block';
+        document.getElementById('generatedStory').innerHTML = formattedStoryText;
+  
+        // Save the story details
+        saveStoryDetails(formattedStoryText);
+    } catch (error) {
+        console.error("Failed to generate story:", error);
+        document.getElementById('generatedStory').style.display = 'block';
+        document.getElementById('generatedStory').innerHTML = 'Failed to generate story. Please try again later.';
+    } finally {
+        // Remove the is-loading class once the request completes or fails
+        submitButton.classList.remove('is-loading');
+    }
   }
-}
-
+  
 // Saves story details to localStorage
 function saveStoryDetails(story) {
   const pastStories = JSON.parse(localStorage.getItem('pastStories')) || [];
